@@ -10,8 +10,6 @@ Navigate to the project directory:
 cd login-journey
 Install project dependencies:
 
-bash
-Copy code
 npm install
 
 ## Usage

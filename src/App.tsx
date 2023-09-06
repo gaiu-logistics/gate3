@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "./layout/Navbar";
-import Footer from "./layout/Footer";
 import { Flex } from "@chakra-ui/react";
 
 export function App() {
@@ -11,8 +10,6 @@ export function App() {
       <Flex py={"1.5rem"} flex="1">
         <Outlet />
       </Flex>
-
-      <Footer />
     </Flex>
   );
 }

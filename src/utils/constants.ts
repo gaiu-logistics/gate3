@@ -8,7 +8,6 @@ import dexLogo from "@/assets/appsGateway/Icons-07 dex.png";
 import aglineLogo from "@/assets/appsGateway/Icons-04 agile.png";
 import wellpoolLogo from "@/assets/appsGateway/Icons-22 wellpool.png";
 import kicasPla from "@/assets/appsGateway/Icons-21 kicas-pla.png";
-import kicasBanner from "@/assets/appsGateway/kicasBanner.jpg";
 import bkApp from "@/assets/appsGateway/BkApp.png";
 export interface SubOption {
   name: string;
@@ -47,12 +46,12 @@ export const subOptionsPassport: SubOption[] = [
       "Media is our app for making all the media of AlkebulanMeta, that will interest you, accessible; articles, events, online mags, radio, podcasts and our 3D-Play is part of the media too.",
   },
   {
-    name: "E-Learning",
+    name: "e-Learning",
     logo: elearningLogo,
     description: "e-Learning is your personalised online learning environment.",
   },
   {
-    name: "Dex",
+    name: "DEx",
     logo: dexLogo,
     description:
       "DEx is the official decentralized exchange app for the Alkebulan Network-State [in development].",
@@ -64,13 +63,13 @@ export const subOptionsPassport: SubOption[] = [
       "Agile will help your objective achievement, its intuitive user interface makes project-based learning and project management easier to do well.",
   },
   {
-    name: "Wellpool",
+    name: "WellPool",
     logo: wellpoolLogo,
     description:
       "WellPool is our Network-State Happiness (“GNH”) Poll, stay on top of your daily wellbeing [in development].",
   },
   {
-    name: "Kicas-Pla",
+    name: "KICAS-PLA",
     logo: kicasPla,
     description:
       "KICAS-PLA is our app for the KICAS Personal Learning Account [in development].",

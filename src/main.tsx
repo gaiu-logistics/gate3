@@ -4,7 +4,6 @@ import * as ReactDOM from "react-dom/client";
 import theme from "./utils/chakra.theme";
 import "./main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { App } from "./App";
 import Login from "./views/Login";
 
 const rootElement = document.getElementById("root") as Element;
@@ -13,9 +12,8 @@ ReactDOM.createRoot(rootElement).render(
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<App />}>
-            <Route path="/" element={<Login />} />
-          </Route>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

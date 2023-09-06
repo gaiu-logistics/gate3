@@ -7,41 +7,29 @@ import {
   DrawerCloseButton,
   DrawerBody,
   Icon,
-  Heading,
-  VStack,
-  HStack,
   Text,
+  Image,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import { useAccount } from "wagmi";
-import { Web3Button } from "@web3modal/react";
-
+import HeaderLogo from "../assets/HeaderLogo.png";
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { isConnected } = useAccount();
 
   return (
-    <Flex pt={4} alignItems="center" justifyContent={"space-between"}>
+    <Flex py={4} alignItems="center" justifyContent={"space-between"}>
       {/* Logo */}
-      <Link to="/">
-        <VStack
-          alignItems={"flex-start"}
-          maxW={"100px"}
-          fontSize={{ base: "sm", md: "lg" }}
-        >
-          <Heading size={["md", "lg"]}>AlkebulanMeta</Heading>
-          <HStack>
-            <Text>Access</Text>
-            <Text>|</Text>
-            <Text>Power</Text>
-            <Text>|</Text>
-            <Text>Learning</Text>
-            <Text>|</Text>
-            <Text>Assets</Text>
-          </HStack>
-        </VStack>
-      </Link>
+      <Flex>
+        <Link to="/">
+          <Image
+            src={HeaderLogo}
+            maxW={["200px", "350px"]}
+            filter={
+              "invert(36%) sepia(82%) saturate(153%) hue-rotate(168deg) brightness(96%) contrast(96%)"
+            }
+          />
+        </Link>
+      </Flex>
       {/* Navbar Links (Visible on Larger Screens) */}
       <Flex display={{ base: "none", lg: "flex" }} gap={8}>
         <Link to="https://alkebulanmeta.app/mission/">
@@ -56,7 +44,6 @@ function Navbar() {
         <Link to="">
           <Text color="textBody">Apps Gateway</Text>
         </Link>
-        {isConnected ? <Web3Button /> : null}
       </Flex>
 
       {/* Burger Menu Icon */}
@@ -89,7 +76,6 @@ function Navbar() {
               <Link to="/">
                 <Text color="textBody">Apps Gateway</Text>
               </Link>
-              {isConnected ? <Web3Button /> : null}
             </DrawerBody>
           </DrawerContent>
         </DrawerOverlay>

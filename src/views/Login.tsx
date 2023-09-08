@@ -13,6 +13,8 @@ import {
   Input,
   TextProps,
   MenuButtonProps,
+  Box,
+  Center,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
@@ -20,13 +22,15 @@ import { ChevronDownIcon } from "@chakra-ui/icons";
 import NotSureSection from "../components/Login/NotSureSection";
 import {
   SubOption,
+  images,
   subOptionsNoPassport,
   subOptionsPassport,
 } from "../utils/constants";
 import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
+import Carousel from "../components/Login/Carousel";
 
-const options = ["OnWeb3-Passport", "No Passport"];
+const options = ["OnWeb3-Passport", "No Passport", "Temporary-Passcode"];
 
 // const settings = {
 //   apiKey: "BGwPIJelIpcE-ssfDVYL8Y3d9AR2_9GO", // Replace with your Alchemy API Key.
@@ -87,15 +91,27 @@ const Login = () => {
               </Text>
             </>
           ) : (
-            <>
-              <Image
-                objectFit={"contain"}
-                src={LoginLogo}
-                alt="Alkebulan Logo"
-                h={"100%"}
-                w={"100%"}
-              />
-            </>
+            <Box position="relative" width="100%">
+              <Carousel images={images} />
+              <Center
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                pointerEvents="none"
+                bg={"bodyBackground"}
+                opacity={0.5}
+              >
+                <Image
+                  src={LoginLogo} // Replace with the URL of your overlay image
+                  alt="Overlay Image"
+                  maxW="100%"
+                  maxH="100%"
+                  objectFit="contain" // Adjust the image sizing as needed
+                />
+              </Center>
+            </Box>
           )}
         </Flex>
 
@@ -157,6 +173,81 @@ const Login = () => {
               <NotSureSection linkStyle={linksStyle} />
             </>
           )}
+          {selectedOption === "Temporary-Passcode" && (
+            <>
+              <Heading>Focus</Heading>
+
+              <Menu>
+                <MenuButton as={Button} {...MenuButtonStyle}>
+                  {subSelectedOption?.name || "Select the app"}
+                </MenuButton>
+                <MenuList h={"80"} overflowY={"scroll"}>
+                  {subOptionsPassport.map((subOption, index) => (
+                    <MenuItem
+                      _hover={{ bg: "grey.500" }}
+                      display={"flex"}
+                      justifyContent={"space-between"}
+                      key={index}
+                      onClick={() => handleSuboptionChange(subOption)}
+                    >
+                      <Text>{subOption.name}</Text>
+                      <Image src={subOption.logo} h={"50px"} w={"50px"} />
+                    </MenuItem>
+                  ))}
+                </MenuList>
+              </Menu>
+              <FormControl
+                layerStyle={"base"}
+                p={6}
+                fontSize={"lg"}
+                display={"flex"}
+                flexDirection={"column"}
+              >
+                <FormLabel>Username</FormLabel>
+                <Input
+                  type="text"
+                  placeholder="Enter your username"
+                  mb={2}
+                  borderColor={"textBody"}
+                  borderWidth={1}
+                />
+
+                <Flex flex={1} gap={1}>
+                  <Flex flexDir={"column"} flex={1}>
+                    <FormLabel>Password</FormLabel>
+                    <Input
+                      type="password"
+                      placeholder="Enter your password"
+                      mb={4}
+                      borderColor={"textBody"}
+                      borderWidth={1}
+                    />
+                  </Flex>
+                  <Flex flexDir={"column"} flex={1}>
+                    <FormLabel>Passcode</FormLabel>
+                    <Input
+                      type="text"
+                      placeholder="Enter your passcode"
+                      mb={4}
+                      borderColor={"textBody"}
+                      borderWidth={1}
+                    />
+                  </Flex>
+                </Flex>
+
+                <Button
+                  type="submit"
+                  placeSelf={"center"}
+                  layerStyle={"base"}
+                  w={"100%"}
+                  bg={"bodyBackground"}
+                >
+                  Log In
+                </Button>
+              </FormControl>
+              <NotSureSection linkStyle={linksStyle} />
+            </>
+          )}
 
           {selectedOption === "No Passport" && (
             <>
@@ -166,13 +257,17 @@ const Login = () => {
                 <MenuButton as={Button} {...MenuButtonStyle}>
                   {subSelectedOption?.name || "Select the app"}
                 </MenuButton>
-                <MenuList>
+                <MenuList h={"80"} overflowY={"scroll"}>
                   {subOptionsNoPassport.map((subOption, index) => (
                     <MenuItem
+                      _hover={{ bg: "grey.500" }}
+                      display={"flex"}
+                      justifyContent={"space-between"}
                       key={index}
                       onClick={() => handleSuboptionChange(subOption)}
                     >
-                      {subOption.name}
+                      <Text>{subOption.name}</Text>
+                      <Image src={subOption.logo} h={"50px"} w={"50px"} />
                     </MenuItem>
                   ))}
                 </MenuList>

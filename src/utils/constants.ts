@@ -9,6 +9,20 @@ import aglineLogo from "@/assets/appsGateway/Icons-04 agile.png";
 import wellpoolLogo from "@/assets/appsGateway/Icons-22 wellpool.png";
 import kicasPla from "@/assets/appsGateway/Icons-21 kicas-pla.png";
 import bkApp from "@/assets/appsGateway/BkApp.png";
+import image1 from "@/assets/slideriamges/1.webp";
+import image2 from "@/assets/slideriamges/2.webp";
+import image3 from "@/assets/slideriamges/3.webp";
+import image4 from "@/assets/slideriamges/4.webp";
+import image5 from "@/assets/slideriamges/5.webp";
+import image6 from "@/assets/slideriamges/6.webp";
+import image7 from "@/assets/slideriamges/7.webp";
+import image8 from "@/assets/slideriamges/8.webp";
+import image9 from "@/assets/slideriamges/9.webp";
+import image10 from "@/assets/slideriamges/10.webp";
+import image11 from "@/assets/slideriamges/11.webp";
+import image12 from "@/assets/slideriamges/12.webp";
+import image13 from "@/assets/slideriamges/13.webp";
+
 export interface SubOption {
   name: string;
   logo: string;
@@ -99,4 +113,19 @@ export const subOptionsNoPassport: SubOption[] = [
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
   },
+];
+export const images: string[] = [
+  image1,
+  image2,
+  image3,
+  image4,
+  image5,
+  image6,
+  image7,
+  image8,
+  image9,
+  image10,
+  image11,
+  image12,
+  image13,
 ];

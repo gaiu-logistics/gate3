@@ -9,14 +9,18 @@ interface CarouselProps {
 
 const Carousel = ({ images, currentIndex, setCurrentIndex }: CarouselProps) => {
   // Automatically move to the next slide every 3 seconds
+
   useEffect(() => {
-    const nextSlide = () => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    const getRandomImageIndex = () => {
+      return Math.floor(Math.random() * images.length);
     };
-    const interval = setInterval(nextSlide, 1000 * 4);
+    const interval = setInterval(() => {
+      const randomIndex = getRandomImageIndex();
+      setCurrentIndex(randomIndex);
+    }, 4000);
+
     return () => clearInterval(interval);
   }, [images.length, setCurrentIndex]);
-
   return (
     <Box
       overflow="hidden"
@@ -26,20 +30,12 @@ const Carousel = ({ images, currentIndex, setCurrentIndex }: CarouselProps) => {
       maxH="fit"
       // Adjust the carousel height as needed
     >
-      <Flex
-        transition="transform 0.5s ease-in-out"
-        transform={`translateX(-${currentIndex * 100}%)`}
-      >
-        {images.map((image, index) => (
-          <Image
-            key={index}
-            src={image}
-            alt={`Slide ${index}`}
-            width="100%"
-            height="100%"
-          />
-        ))}
-      </Flex>
+      <Image
+        src={images[currentIndex]}
+        alt={`Slide ${currentIndex}`}
+        width="100%"
+        height="100%"
+      />
     </Box>
   );
 };

@@ -15,7 +15,7 @@ const Carousel = ({ images }: CarouselProps) => {
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
-    const interval = setInterval(nextSlide, 1000 * 6000);
+    const interval = setInterval(nextSlide, 1000 * 6);
     return () => clearInterval(interval);
   }, [images.length]);
 

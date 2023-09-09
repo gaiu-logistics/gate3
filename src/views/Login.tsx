@@ -51,6 +51,9 @@ const MenuButtonStyle: MenuButtonProps = {
 const Login = () => {
   const [selectedOption, setSelectedOption] = useState("");
   const [subSelectedOption, setSubSelectedOption] = useState<SubOption>();
+  const [currentIndex, setCurrentIndex] = useState(() => {
+    return Math.floor(Math.random() * images.length);
+  });
 
   const handleOptionChange = (value: string) => {
     setSelectedOption(value);
@@ -59,10 +62,13 @@ const Login = () => {
   const handleSuboptionChange = (value: SubOption) => {
     setSubSelectedOption(value);
   };
+  const resetAllSelections = () => {
+    setSelectedOption("");
+  };
 
   return (
     <>
-      <Navbar />
+      <Navbar resetAllSelections={resetAllSelections} />
       <Flex
         direction={["column", "column", "row"]}
         flex={1}
@@ -78,7 +84,7 @@ const Login = () => {
           minW={["100%", "50%"]}
           justify={"center"}
         >
-          {subSelectedOption ? (
+          {selectedOption.length > 0 && subSelectedOption ? (
             <>
               <Image
                 maxH={"15rem"}
@@ -92,7 +98,11 @@ const Login = () => {
             </>
           ) : (
             <Box position="relative" width="100%">
-              <Carousel images={images} />
+              <Carousel
+                images={images}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+              />
               <Center
                 position="absolute"
                 top="0"

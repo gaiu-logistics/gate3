@@ -1,23 +1,21 @@
-import { useState, useEffect } from "react";
-import { Box, Image, Flex, ChakraProvider } from "@chakra-ui/react";
+import { useEffect } from "react";
+import { Box, Image, Flex } from "@chakra-ui/react";
 
 interface CarouselProps {
   images: string[];
+  currentIndex: number;
+  setCurrentIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Carousel = ({ images }: CarouselProps) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Function to advance to the next slide
-
+const Carousel = ({ images, currentIndex, setCurrentIndex }: CarouselProps) => {
   // Automatically move to the next slide every 3 seconds
   useEffect(() => {
     const nextSlide = () => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
-    const interval = setInterval(nextSlide, 1000 * 6);
+    const interval = setInterval(nextSlide, 1000 * 4);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [images.length, setCurrentIndex]);
 
   return (
     <Box

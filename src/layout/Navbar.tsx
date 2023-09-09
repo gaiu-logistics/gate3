@@ -13,13 +13,17 @@ import {
 import { HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
 import HeaderLogo from "../assets/HeaderLogo.png";
-function Navbar() {
+
+interface NavbarProps {
+  resetAllSelections: () => void;
+}
+function Navbar({ resetAllSelections }: NavbarProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <Flex py={4} alignItems="center" justifyContent={"space-between"}>
       {/* Logo */}
-      <Flex>
+      <Flex onClick={resetAllSelections}>
         <Link to="/">
           <Image
             src={HeaderLogo}

@@ -39,7 +39,7 @@ export const subOptionsPassport: SubOption[] = [
     name: "Chat",
     logo: chatLogo,
     description:
-      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol",
+      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
   },
   {
     name: "3D-Play",
@@ -105,7 +105,7 @@ export const subOptionsNoPassport: SubOption[] = [
     name: "Chat",
     logo: chatLogo,
     description:
-      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol",
+      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
   },
   {
     name: "dLinks",

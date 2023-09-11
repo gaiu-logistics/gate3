@@ -30,7 +30,9 @@ import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
 import Carousel from "../components/Login/Carousel";
 
-const options = ["OnWeb3-Passport", "No Passport", "Temporary-Passcode"];
+const options = ["OnWeb3-Passport", "Temporary-Passcode", "No Passport"];
+// const options = ["OnWeb3-Passport", "No Passport", "Temporary-Passcode"];
+
 
 // const settings = {
 //   apiKey: "BGwPIJelIpcE-ssfDVYL8Y3d9AR2_9GO", // Replace with your Alchemy API Key.

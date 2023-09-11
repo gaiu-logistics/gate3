@@ -86,7 +86,7 @@ export const subOptionsPassport: SubOption[] = [
     name: "KICAS-PLA",
     logo: kicasPla,
     description:
-      "KICAS-PLA is our app for the KICAS Personal Learning Account [in development].",
+      "KICAS-PLA is your Personal Learning Assistant app for the development of KICAS; Knowledge, Insight, Competencies, Abilities and Skills. [in development].",
   },
   {
     name: "BKApp",

@@ -33,7 +33,7 @@ export const subOptionsPassport: SubOption[] = [
   {
     name: "Assets",
     logo: assetsLogo,
-    description: "Assets is your Learning Assets store.",
+    description: "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
   },
   {
     name: "Chat",

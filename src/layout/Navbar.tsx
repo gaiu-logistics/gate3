@@ -45,7 +45,7 @@ function Navbar({ resetAllSelections }: NavbarProps) {
         <Link to="https://alkebulanmeta.app/onweb3-passport-basket/">
           <Text>Assets Basket</Text>
         </Link>
-        <Link to="">
+        <Link to="https://alkebulanmeta.app/apps-gateway/">
           <Text color="textBody">Apps Gateway</Text>
         </Link>
       </Flex>
@@ -77,7 +77,7 @@ function Navbar({ resetAllSelections }: NavbarProps) {
               <Link to="https://alkebulanmeta.app/onweb3-passport-basket/">
                 <Text>Assets Basket</Text>
               </Link>
-              <Link to="/">
+              <Link to="https://alkebulanmeta.app/apps-gateway/">
                 <Text color="textBody">Apps Gateway</Text>
               </Link>
             </DrawerBody>

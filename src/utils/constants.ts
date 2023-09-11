@@ -39,7 +39,7 @@ export const subOptionsPassport: SubOption[] = [
     name: "Chat",
     logo: chatLogo,
     description:
-      "Chat is your secure communications (messaging and multimedia) platform.",
+      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol",
   },
   {
     name: "3D-Play",
@@ -80,7 +80,7 @@ export const subOptionsPassport: SubOption[] = [
     name: "WellPool",
     logo: wellpoolLogo,
     description:
-      "WellPool is our Network-State Happiness (“GNH”) Poll, stay on top of your daily wellbeing [in development].",
+      "WellPool is our Network-State Happiness (“GNH”) Poll, stay on top of your daily wellbeing and get a unique overview to various levels of our communally self-assessed health [in development].",
   },
   {
     name: "KICAS-PLA",
@@ -92,20 +92,20 @@ export const subOptionsPassport: SubOption[] = [
     name: "BKApp",
     logo: bkApp,
     description:
-      "BKApp supports members' engagement across our Meta Readers' Rooms [in development].",
+      "BKApp supports members' engagement across our various Meta Readers' Rooms [in development].",
   },
 ];
 export const subOptionsNoPassport: SubOption[] = [
   {
     name: "Assets",
     logo: assetsLogo,
-    description: "Assets is your Learning Assets store.",
+    description: "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
   },
   {
     name: "Chat",
     logo: chatLogo,
     description:
-      "Chat is your secure communications (messaging and multimedia) platform.",
+      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol",
   },
   {
     name: "dLinks",

@@ -29,10 +29,10 @@ import {
 import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
 import Carousel from "../components/Login/Carousel";
+import { useNavigate } from "react-router-dom";
 
 const options = ["OnWeb3-Passport", "Temporary-Passcode", "No Passport"];
 // const options = ["OnWeb3-Passport", "No Passport", "Temporary-Passcode"];
-
 
 // const settings = {
 //   apiKey: "BGwPIJelIpcE-ssfDVYL8Y3d9AR2_9GO", // Replace with your Alchemy API Key.
@@ -57,6 +57,7 @@ const Login = () => {
     return Math.floor(Math.random() * images.length);
   });
 
+  const navigate = useNavigate();
   const handleOptionChange = (value: string) => {
     setSelectedOption(value);
   };
@@ -99,7 +100,13 @@ const Login = () => {
               </Text>
             </>
           ) : (
-            <Box position="relative" width="100%">
+            <Box
+              position="relative"
+              width="100%"
+              onClick={() => {
+                navigate("/dLinks");
+              }}
+            >
               <Carousel
                 images={images}
                 currentIndex={currentIndex}

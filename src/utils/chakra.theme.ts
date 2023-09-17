@@ -46,6 +46,9 @@ const theme = extendTheme({
     hyperlink: {
       color: "red",
     },
+    tab: {
+      boxShadow: "1rem 1rem 2rem rgba(174, 174, 192, 0.4)",
+    },
   },
 
   styles: {

@@ -15,7 +15,7 @@ import { Link } from "react-router-dom";
 import HeaderLogo from "../assets/HeaderLogo.png";
 
 interface NavbarProps {
-  resetAllSelections: () => void;
+  resetAllSelections?: () => void;
 }
 function Navbar({ resetAllSelections }: NavbarProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();

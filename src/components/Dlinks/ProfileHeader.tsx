@@ -33,11 +33,12 @@ const ProfileHeader = () => {
         bg={"white"}
         columns={[2, 2, 2, 3]}
         minH={"50vh"}
-        my={10}
+        pt={10}
+        mb={10}
         px={[2, 10, 20]}
         alignContent={"center"}
       >
-        <VStack p={[2, 10, 10, 20]} order={[2, 2, 2, 0]}>
+        <VStack p={[2, 10, 10, 20]} order={[2, 2, 2, 0]} gap={20}>
           <FullScreenImage imageUrl={Dlinks} />
           <Button>Share</Button>
         </VStack>

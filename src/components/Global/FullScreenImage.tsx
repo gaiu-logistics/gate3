@@ -9,7 +9,7 @@ import {
   ModalBody,
 } from "@chakra-ui/react";
 
-const FullScreenImage = ({ imageUrl }: { imageUrl: stirng }) => {
+const FullScreenImage = ({ imageUrl }: { imageUrl: string }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -22,7 +22,7 @@ const FullScreenImage = ({ imageUrl }: { imageUrl: stirng }) => {
 
   return (
     <>
-      <Box onClick={openModal} cursor="pointer">
+      <Box onClick={openModal} cursor="pointer" border={"2px solid grey"}>
         <Image src={imageUrl} alt="Image" maxW="100%" maxH="100%" />
       </Box>
 

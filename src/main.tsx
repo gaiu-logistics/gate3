@@ -5,7 +5,6 @@ import theme from "./utils/chakra.theme";
 import "./main.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./views/Login";
-import DLinks from "./views/DLinks";
 
 const rootElement = document.getElementById("root") as Element;
 ReactDOM.createRoot(rootElement).render(
@@ -15,7 +14,6 @@ ReactDOM.createRoot(rootElement).render(
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dLinks" element={<DLinks />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

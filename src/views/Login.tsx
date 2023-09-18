@@ -29,7 +29,6 @@ import {
 import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
 import Carousel from "../components/Login/Carousel";
-import { useNavigate } from "react-router-dom";
 
 const options = ["OnWeb3-Passport", "Temporary-Passcode", "No Passport"];
 // const options = ["OnWeb3-Passport", "No Passport", "Temporary-Passcode"];
@@ -57,7 +56,6 @@ const Login = () => {
     return Math.floor(Math.random() * images.length);
   });
 
-  const navigate = useNavigate();
   const handleOptionChange = (value: string) => {
     setSelectedOption(value);
   };
@@ -100,13 +98,7 @@ const Login = () => {
               </Text>
             </>
           ) : (
-            <Box
-              position="relative"
-              width="100%"
-              onClick={() => {
-                navigate("/dLinks");
-              }}
-            >
+            <Box position="relative" width="100%">
               <Carousel
                 images={images}
                 currentIndex={currentIndex}

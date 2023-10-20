@@ -1,12 +1,40 @@
-import { Outlet } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
-
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "./utils/chakra.theme";
+import "./main.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Login from "./views/Login";
+import { useEffect, useState } from "react";
+import Keycloak from "keycloak-js";
+const keycloakInstance = new Keycloak({
+  clientId: "ow3-uni-login-app",
+  realm: "OnWeb3Keycloak",
+  url: "https://eidm.alkebulanmeta.network/",
+});
 export function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  useEffect(() => {
+    keycloakInstance
+      .init({
+        onLoad: "login-required",
+        checkLoginIframe: false,
+        redirectUri: "http://localhost:5173/",
+      })
+      .then((authenticated: boolean) => {
+        setIsAuthenticated(authenticated);
+      });
+  }, []);
+
+  console.log(isAuthenticated);
   return (
-    <Flex flexDirection="column" maxHeight="100vh">
-      <Flex py={"1.5rem"} flex="1">
-        <Outlet />
-      </Flex>
-    </Flex>
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={isAuthenticated && <Login isAuthenticated />}
+          />
+        </Routes>
+      </BrowserRouter>
+    </ChakraProvider>
   );
 }

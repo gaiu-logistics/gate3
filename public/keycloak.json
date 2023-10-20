@@ -1,0 +1,8 @@
+{
+  "realm": "OnWeb3Keycloak",
+  "auth-server-url": "https://eidm.alkebulanmeta.network/",
+  "ssl-required": "external",
+  "resource": "ow3-uni-login-app",
+  "public-client": true,
+  "confidential-port": 0
+}

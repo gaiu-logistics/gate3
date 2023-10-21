@@ -17,7 +17,7 @@ export function App() {
       .init({
         onLoad: "login-required",
         checkLoginIframe: false,
-        redirectUri: "https://login.alkebulanmeta.network/focus",
+        redirectUri: "https://gateway.alkebulanmeta.network/focus",
       })
       .then((authenticated: boolean) => {
         setIsAuthenticated(authenticated);

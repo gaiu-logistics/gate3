@@ -17,7 +17,7 @@ export function App() {
       .init({
         onLoad: "login-required",
         checkLoginIframe: false,
-        redirectUri: "https://gateway.alkebulanmeta.network/focus",
+        redirectUri: "https://gate3.alkebulanmeta.network/",
       })
       .then((authenticated: boolean) => {
         setIsAuthenticated(authenticated);
@@ -30,7 +30,7 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/focus"
+            path="/*"
             element={isAuthenticated && <Login isAuthenticated />}
           />
         </Routes>

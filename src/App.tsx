@@ -8,7 +8,7 @@ import Keycloak from "keycloak-js";
 const keycloakInstance = new Keycloak({
   clientId: "ow3-uni-login-app",
   realm: "OnWeb3Keycloak",
-  url: "https://eidm.alkebulanmeta.network/",
+  url: "https://gate2.alkebulanmeta.network/",
 });
 export function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

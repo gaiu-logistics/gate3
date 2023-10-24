@@ -279,22 +279,6 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                   display={"flex"}
                   flexDirection={"column"}
                 >
-                  <FormLabel>Username</FormLabel>
-                  <Input
-                    type="text"
-                    placeholder="Enter your username"
-                    mb={2}
-                    borderColor={"textBody"}
-                    borderWidth={1}
-                  />
-                  <FormLabel>Password</FormLabel>
-                  <Input
-                    type="password"
-                    placeholder="Enter your password"
-                    mb={4}
-                    borderColor={"textBody"}
-                    borderWidth={1}
-                  />
                   <Button
                     type="submit"
                     placeSelf={"center"}
@@ -302,7 +286,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     w={"100%"}
                     bg={"bodyBackground"}
                   >
-                    Log In
+                    Connect
                   </Button>
                 </FormControl>
                 <NotSureSection linkStyle={linksStyle} />

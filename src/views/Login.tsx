@@ -24,6 +24,7 @@ import {
   images,
   subOptionsNoPassport,
   subOptionsPassport,
+  subOptionsTemporary,
 } from "../utils/constants";
 import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
@@ -173,6 +174,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                         justifyContent={"space-between"}
                         key={index}
                         onClick={() => handleSuboptionChange(subOption)}
+                        isDisabled={subOption.disabled}
                       >
                         <Text>{subOption.name}</Text>
                         <Image src={subOption.logo} h={"50px"} w={"50px"} />
@@ -180,7 +182,15 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     ))}
                   </MenuList>
                 </Menu>
-                <Button fontSize="lg" layerStyle={"base"} bg={"bodyBackground"}>
+                <Button
+                  onClick={() => {
+                    window.location.href =
+                      subSelectedOption?.authLink as string;
+                  }}
+                  fontSize="lg"
+                  layerStyle={"base"}
+                  bg={"bodyBackground"}
+                >
                   <Text>Connect</Text>
                 </Button>
                 <NotSureSection linkStyle={linksStyle} />
@@ -199,13 +209,14 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     />
                   </MenuButton>
                   <MenuList h={"80"} overflowY={"scroll"}>
-                    {subOptionsPassport.map((subOption, index) => (
+                    {subOptionsTemporary.map((subOption, index) => (
                       <MenuItem
                         _hover={{ bg: "grey.500" }}
                         display={"flex"}
                         justifyContent={"space-between"}
                         key={index}
                         onClick={() => handleSuboptionChange(subOption)}
+                        isDisabled={subOption.disabled}
                       >
                         <Text>{subOption.name}</Text>
                         <Image src={subOption.logo} h={"50px"} w={"50px"} />
@@ -227,6 +238,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                         type="text"
                         placeholder="Enter your passcode"
                         mb={4}
+                        value={1101100}
                         borderColor={"textBody"}
                         borderWidth={1}
                       />
@@ -238,6 +250,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
+                    onClick={() => {
+                      window.location.href =
+                        subSelectedOption?.authLink as string;
+                    }}
                   >
                     Log In
                   </Button>
@@ -265,6 +281,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                         justifyContent={"space-between"}
                         key={index}
                         onClick={() => handleSuboptionChange(subOption)}
+                        isDisabled={subOption.disabled}
                       >
                         <Text>{subOption.name}</Text>
                         <Image src={subOption.logo} h={"50px"} w={"50px"} />
@@ -285,6 +302,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
+                    onClick={() => {
+                      window.location.href =
+                        subSelectedOption?.authLink as string;
+                    }}
                   >
                     Connect
                   </Button>

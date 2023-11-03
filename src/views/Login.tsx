@@ -261,6 +261,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                         } else {
                           alert("Please select an app");
                         }
+                      } else {
+                        alert(
+                          "You are not approved for Temporary-Passcode access"
+                        );
                       }
                     }}
                   >

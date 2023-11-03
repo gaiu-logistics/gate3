@@ -232,8 +232,8 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                   flexDirection={"column"}
                 >
                   <Flex flex={1} gap={1}>
-                    <Flex flexDir={"column"} flex={1}>
-                      {!isAuthenticated ? (
+                    <Flex flexDir={"column"} flex={1} mb={4}>
+                      {isAuthenticated ? (
                         <Text>I am approved for Temporary-Passcode access</Text>
                       ) : (
                         <Text>

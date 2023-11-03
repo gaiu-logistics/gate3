@@ -15,9 +15,10 @@ import {
   MenuButtonProps,
   Box,
   Center,
+  Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+import { CheckIcon, ChevronDownIcon, CloseIcon } from "@chakra-ui/icons";
 import NotSureSection from "../components/Login/NotSureSection";
 import {
   SubOption,
@@ -234,10 +235,14 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                   <Flex flex={1} gap={1} mb={8}>
                     <Flex flexDir={"column"} flex={1}>
                       {isAuthenticated ? (
-                        <Text>I am approved for Temporary-Passcode access</Text>
+                        <Text>
+                          I am approved for Temporary-Passcode access
+                          <CheckIcon as="span" color={"green.500"} />
+                        </Text>
                       ) : (
                         <Text>
-                          I am not approved for Temporary-Passcode access
+                          I am not approved for Temporary-Passcode access{" "}
+                          <CloseIcon as="span" color={"red.500"} />
                         </Text>
                       )}
                     </Flex>

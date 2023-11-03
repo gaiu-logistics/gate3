@@ -248,7 +248,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
-                    disabled={!isAuthenticated}
+                    disabled={!isAuthenticated || !subSelectedOption}
                     onClick={() => {
                       window.location.href =
                         subSelectedOption?.authLink as string;

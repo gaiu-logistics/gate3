@@ -140,7 +140,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
             <Heading>STATUS</Heading>
             <Menu>
               <MenuButton as={Button} {...MenuButtonStyle}>
-                <Text>{selectedOption || "Select an option"}</Text>
+                <Text>{selectedOption || "Login with"}</Text>
                 <ChevronDownIcon position={"absolute"} right={"10px"} top={3} />
               </MenuButton>
               <MenuList>
@@ -238,7 +238,6 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                         type="text"
                         placeholder="Enter your passcode"
                         mb={4}
-                        value={1101100}
                         borderColor={"textBody"}
                         borderWidth={1}
                       />

@@ -39,7 +39,6 @@ export const subOptionsPassport: SubOption[] = [
       "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?client_id=ansAssetsStore&scope=openid%20email%20profile&redirect_uri=https://alkebulanmeta.app&response_type=code&state=T25XZWIzIEtleWNsb2Fr",
-    disabled: true,
   },
   {
     name: "Chat",
@@ -48,69 +47,69 @@ export const subOptionsPassport: SubOption[] = [
       "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/saml?SAMLRequest=hZFNT4NAEIbvJv6Hzd6B5UOBTaGpGmOTmjYt9eClWWBiSWEXd5bany8tNqmJqXOcr%2FeZd0bjQ1OTPWislEyoazNKQBaqrORHQtfZsxXRcTpC0dQtn3RmK5fw2QEa0s9J5KdCQjstuRJYIZeiAeSm4KvJ64x7NuOtVkYVqqZk%2BpTQDQviPPTyICr9MnIZxHdBWRZlUEDpxzGLoYjy0L9nsaDk7czlHbmmiB1MJRohTZ9inm%2B5zPKCzA05izkL3ylZ%2FIg9VHI44RpZPjQhf8myhbWYrzJKJoigTS%2F6qCR2DegV6H1VwHo5S%2BjWmBa54%2BSqs0W9g7yrhWzACFuC%2BVJ654jeIqdRm6MvTr8eDna7bSkZLOSnE%2FSFd9cBxRmGpv9Kj5wLhfT2hvwRQ8%2FvR6bf&RelayState=%2Fauth%2Fmo_saml%2Findex.php",
-    disabled: true,
   },
   {
     name: "3D-Play",
     logo: threeDPlayLogo,
     description:
       "3D-Play is our network-state’s multi-dimensional immersive space, our metaverse [in development].",
-    disabled: true,
+    authLink: "https://3d.alkebulanmeta.app/",
   },
   {
     name: "dLinks",
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
-    disabled: true,
   },
   {
     name: "Media",
     logo: mediaLogo,
     description:
       "Media is our app for making all the media of AlkebulanMeta, that will interest you, accessible; articles, events, online mags, radio, podcasts and our 3D-Play is part of the media too.",
-    disabled: true,
+    authLink: "https://media.alkebulanmeta.network/",
   },
   {
     name: "e-Learning",
     logo: elearningLogo,
     description: "e-Learning is your personalised online learning environment.",
-    disabled: true,
+    authLink:
+      "https://bou.alkebulanmeta.network/auth/mo_saml/index.php&scope=openid+email+profile",
   },
   {
     name: "DEx",
     logo: dexLogo,
     description:
       "DEx is the official decentralized exchange app for the Alkebulan Network-State [in development].",
-    disabled: true,
+    authLink: "https://dex.alkebulanmeta.network/",
   },
   {
     name: "Agile",
     logo: aglineLogo,
     description:
       "Agile will help your objective achievement, its intuitive user interface makes project-based learning and project management easier to do well.",
-    disabled: true,
+    authLink:
+      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?redirect_uri=https://agile.alkebulanmeta.network/login&client_id=taiga-sso&response_type=code&scope=openid+email+profile",
   },
   {
     name: "WellPool",
     logo: wellpoolLogo,
     description:
       "WellPool is our Network-State Happiness (“GNH”) Poll, stay on top of your daily wellbeing and get a unique overview to various levels of our communally self-assessed health [in development].",
-    disabled: true,
+    authLink: "https://wellpool.apps.alkebulanmeta.network/",
   },
   {
     name: "KICAS-PLA",
     logo: kicasPla,
     description:
       "KICAS-PLA is your Personal Learning Assistant app for the development of KICAS; Knowledge, Insight, Competencies, Abilities and Skills. [in development].",
-    disabled: true,
+    authLink: "https://kicas.apps.alkebulanmeta.network/",
   },
   {
     name: "BKApp",
     logo: bkApp,
     description:
       "BKApp supports members' engagement across our various Meta Readers' Rooms [in development].",
-    disabled: true,
+    authLink: "https://bk.apps.alkebulanmeta.network/",
   },
 ];
 export const subOptionsNoPassport: SubOption[] = [
@@ -121,7 +120,6 @@ export const subOptionsNoPassport: SubOption[] = [
       "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?client_id=ansAssetsStore&scope=openid%20email%20profile&redirect_uri=https://alkebulanmeta.app&response_type=code&state=T25XZWIzIEtleWNsb2Fr",
-    disabled: false,
   },
   {
     name: "Chat",
@@ -130,14 +128,12 @@ export const subOptionsNoPassport: SubOption[] = [
       "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?response_type=code&client_id=ans-chat-app&redirect_uri=https%3A%2F%2Fmatrix.alkebulanmeta.net%2F_synapse%2Fclient%2Foidc%2Fcallback&scope=openid+profile&state=zuq6NjXuzeljsx8wQCgAbUg77LJrjG&nonce=p5dIWfz2fJcVAGsqnTyPqKHEiU2NAT&code_challenge_method=S256&code_challenge=78Zp5jeEpjhGFijLNq59sFTYsDL9RRN38DcGFwdLc1U",
-    disabled: false,
   },
   {
     name: "dLinks",
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
-    disabled: true,
   },
 ];
 export const subOptionsTemporary: SubOption[] = [
@@ -148,7 +144,6 @@ export const subOptionsTemporary: SubOption[] = [
       "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?client_id=ansAssetsStore&scope=openid%20email%20profile&redirect_uri=https://alkebulanmeta.app&response_type=code&state=T25XZWIzIEtleWNsb2Fr",
-    disabled: false,
   },
   {
     name: "Chat",
@@ -157,7 +152,6 @@ export const subOptionsTemporary: SubOption[] = [
       "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?response_type=code&client_id=ans-chat-app&redirect_uri=https%3A%2F%2Fmatrix.alkebulanmeta.net%2F_synapse%2Fclient%2Foidc%2Fcallback&scope=openid+profile&state=zuq6NjXuzeljsx8wQCgAbUg77LJrjG&nonce=p5dIWfz2fJcVAGsqnTyPqKHEiU2NAT&code_challenge_method=S256&code_challenge=78Zp5jeEpjhGFijLNq59sFTYsDL9RRN38DcGFwdLc1U",
-    disabled: false,
   },
   {
     name: "e-Learning",
@@ -165,7 +159,6 @@ export const subOptionsTemporary: SubOption[] = [
     description: "e-Learning is your personalised online learning environment.",
     authLink:
       "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/saml?SAMLRequest=hZFNT4NAEIbvJv6Hzd6B5UOBTaGpGmOTmjYt9eClWWBiSWEXd5bany8tNqmJqXOcr%2FeZd0bjQ1OTPWislEyoazNKQBaqrORHQtfZsxXRcTpC0dQtn3RmK5fw2QEa0s9J5KdCQjstuRJYIZeiAeSm4KvJ64x7NuOtVkYVqqZk%2BpTQDQviPPTyICr9MnIZxHdBWRZlUEDpxzGLoYjy0L9nsaDk7czlHbmmiB1MJRohTZ9inm%2B5zPKCzA05izkL3ylZ%2FIg9VHI44RpZPjQhf8myhbWYrzJKJoigTS%2F6qCR2DegV6H1VwHo5S%2BjWmBa54%2BSqs0W9g7yrhWzACFuC%2BVJ654jeIqdRm6MvTr8eDna7bSkZLOSnE%2FSFd9cBxRmGpv9Kj5wLhfT2hvwRQ8%2FvR6bf&RelayState=%2Fauth%2Fmo_saml%2Findex.php",
-    disabled: false,
   },
 ];
 

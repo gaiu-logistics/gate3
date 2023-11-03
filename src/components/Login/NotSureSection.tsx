@@ -7,7 +7,7 @@ const NotSureSection = ({ linkStyle }: NotSureSectionProps) => {
   const links = [
     {
       name: "Register",
-      path: "https://id.alkebulanmeta.network/registration",
+      path: "https://register.alkebulanmeta.network/now/",
     },
     {
       name: "Get Onweb3-Passport",

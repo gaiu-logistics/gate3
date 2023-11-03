@@ -231,8 +231,8 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                   display={"flex"}
                   flexDirection={"column"}
                 >
-                  <Flex flex={1} gap={1}>
-                    <Flex flexDir={"column"} flex={1} mb={4}>
+                  <Flex flex={1} gap={1} mb={8}>
+                    <Flex flexDir={"column"} flex={1}>
                       {isAuthenticated ? (
                         <Text>I am approved for Temporary-Passcode access</Text>
                       ) : (
@@ -248,7 +248,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
-                    disabled={!isAuthenticated || !subSelectedOption}
+                    disabled={
+                      !isAuthenticated ||
+                      subSelectedOption?.authLink?.length === (0 as number)
+                    }
                     onClick={() => {
                       window.location.href =
                         subSelectedOption?.authLink as string;

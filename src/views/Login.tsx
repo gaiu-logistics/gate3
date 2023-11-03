@@ -236,7 +236,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     <Flex flexDir={"column"} flex={1}>
                       {isAuthenticated ? (
                         <Text>
-                          I am approved for Temporary-Passcode access
+                          I am approved for Temporary-Passcode access{" "}
                           <CheckIcon as="span" color={"green.500"} />
                         </Text>
                       ) : (

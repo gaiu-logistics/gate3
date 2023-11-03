@@ -209,7 +209,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     />
                   </MenuButton>
                   <MenuList h={"80"} overflowY={"scroll"}>
-                    {subOptionsTemporary.map((subOption, index) => (
+                    {subOptionsPassport.map((subOption, index) => (
                       <MenuItem
                         _hover={{ bg: "grey.500" }}
                         display={"flex"}
@@ -233,14 +233,13 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                 >
                   <Flex flex={1} gap={1}>
                     <Flex flexDir={"column"} flex={1}>
-                      <FormLabel>Passcode</FormLabel>
-                      <Input
-                        type="text"
-                        placeholder="Enter your passcode"
-                        mb={4}
-                        borderColor={"textBody"}
-                        borderWidth={1}
-                      />
+                      {!isAuthenticated ? (
+                        <Text>I am approved for Temporary-Passcode access</Text>
+                      ) : (
+                        <Text>
+                          I am not approved for Temporary-Passcode access
+                        </Text>
+                      )}
                     </Flex>
                   </Flex>
                   <Button
@@ -249,6 +248,7 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
+                    disabled={!isAuthenticated}
                     onClick={() => {
                       window.location.href =
                         subSelectedOption?.authLink as string;

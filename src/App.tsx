@@ -5,31 +5,34 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./views/Login";
 import { useEffect, useState } from "react";
 import Keycloak from "keycloak-js";
-// const keycloakInstance = new Keycloak({
-//   clientId: "ow3-uni-login-app",
-//   realm: "OnWeb3Keycloak",
-//   url: "https://gate2.alkebulanmeta.network/",
-// });
+const keycloakInstance = new Keycloak({
+  clientId: "ow3-uni-login-app",
+  realm: "OnWeb3Keycloak",
+  url: "https://gate2.alkebulanmeta.network/",
+});
 export function App() {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-  // useEffect(() => {
-  //   keycloakInstance
-  //     .init({
-  //       onLoad: "login-required",
-  //       checkLoginIframe: false,
-  //       redirectUri: "https://gate3.alkebulanmeta.network/",
-  //     })
-  //     .then((authenticated: boolean) => {
-  //       setIsAuthenticated(authenticated);
-  //     });
-  // }, []);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  useEffect(() => {
+    keycloakInstance
+      .init({
+        onLoad: "login-required",
+        checkLoginIframe: false,
+        redirectUri: "https://gate3.alkebulanmeta.network/",
+      })
+      .then(() => {
+        setIsAuthenticated(keycloakInstance.tokenParsed!.hTA3);
+      });
+  }, []);
 
   // console.log(isAuthenticated);
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path="/*" element={<Login isAuthenticated={true} />} />
+          <Route
+            path="/*"
+            element={<Login isAuthenticated={isAuthenticated} />}
+          />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>

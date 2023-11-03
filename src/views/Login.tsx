@@ -253,10 +253,15 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     layerStyle={"base"}
                     w={"100%"}
                     bg={"bodyBackground"}
-                    disabled={!isAuthenticated && !subSelectedOption?.authLink}
                     onClick={() => {
-                      window.location.href =
-                        subSelectedOption?.authLink as string;
+                      if (isAuthenticated && subSelectedOption?.authLink) {
+                        window.location.href =
+                          subSelectedOption?.authLink as string;
+                      } else {
+                        alert(
+                          "You are not approved for Temporary-Passcode access"
+                        );
+                      }
                     }}
                   >
                     Log In

@@ -254,13 +254,13 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     w={"100%"}
                     bg={"bodyBackground"}
                     onClick={() => {
-                      if (isAuthenticated && subSelectedOption?.authLink) {
-                        window.location.href =
-                          subSelectedOption?.authLink as string;
-                      } else {
-                        alert(
-                          "You are not approved for Temporary-Passcode access"
-                        );
+                      if (isAuthenticated) {
+                        if (subSelectedOption?.authLink) {
+                          window.location.href =
+                            subSelectedOption?.authLink as string;
+                        } else {
+                          alert("Please select an app");
+                        }
                       }
                     }}
                   >

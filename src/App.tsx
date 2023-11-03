@@ -17,7 +17,7 @@ export function App() {
       .init({
         onLoad: "login-required",
         checkLoginIframe: false,
-        redirectUri: "https://gate3.alkebulanmeta.network/",
+        redirectUri: "https://gate3v.alkebulanmeta.network/",
       })
       .then(() => {
         setIsAuthenticated(keycloakInstance.tokenParsed!.hTA3);

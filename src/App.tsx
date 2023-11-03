@@ -17,14 +17,14 @@ export function App() {
       .init({
         onLoad: "login-required",
         checkLoginIframe: false,
-        redirectUri: "https://gate3v.alkebulanmeta.network/",
+        redirectUri: "http://localhost:5173/",
       })
       .then(() => {
         setIsAuthenticated(keycloakInstance.tokenParsed!.hTA3);
       });
   }, []);
 
-  // console.log(isAuthenticated);
+  console.log(keycloakInstance?.tokenParsed?.hTA3);
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>

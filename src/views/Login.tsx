@@ -9,13 +9,10 @@ import {
   Image,
   Heading,
   FormControl,
-  FormLabel,
-  Input,
   TextProps,
   MenuButtonProps,
   Box,
   Center,
-  Icon,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { CheckIcon, ChevronDownIcon, CloseIcon } from "@chakra-ui/icons";
@@ -25,7 +22,6 @@ import {
   images,
   subOptionsNoPassport,
   subOptionsPassport,
-  subOptionsTemporary,
 } from "../utils/constants";
 import LoginLogo from "@/assets/loginIcon.png";
 import Navbar from "../layout/Navbar";
@@ -50,9 +46,10 @@ const MenuButtonStyle: MenuButtonProps = {
 };
 type LoginProps = {
   isAuthenticated: boolean;
+  keycloakInstance: any;
 };
 
-const Login = ({ isAuthenticated }: LoginProps) => {
+const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
   const [selectedOption, setSelectedOption] = useState("");
   const [subSelectedOption, setSubSelectedOption] = useState<SubOption>();
   const [currentIndex, setCurrentIndex] = useState(() => {
@@ -194,7 +191,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                 >
                   <Text>Connect</Text>
                 </Button>
-                <NotSureSection linkStyle={linksStyle} />
+                <NotSureSection
+                  linkStyle={linksStyle}
+                  keycloakInstance={keycloakInstance}
+                />{" "}
               </>
             )}
             {selectedOption === "Temporary-Passcode" && (
@@ -271,7 +271,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     Log In
                   </Button>
                 </FormControl>
-                <NotSureSection linkStyle={linksStyle} />
+                <NotSureSection
+                  linkStyle={linksStyle}
+                  keycloakInstance={keycloakInstance}
+                />{" "}
               </>
             )}
             {selectedOption === "No Passport" && (
@@ -323,7 +326,10 @@ const Login = ({ isAuthenticated }: LoginProps) => {
                     Connect
                   </Button>
                 </FormControl>
-                <NotSureSection linkStyle={linksStyle} />
+                <NotSureSection
+                  linkStyle={linksStyle}
+                  keycloakInstance={keycloakInstance}
+                />
               </>
             )}
           </Flex>

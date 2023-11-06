@@ -1,9 +1,13 @@
-import { Flex, Text, TextProps } from "@chakra-ui/react";
+import { Button, Flex, Text, TextProps } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 interface NotSureSectionProps {
   linkStyle: TextProps;
+  keycloakInstance: any;
 }
-const NotSureSection = ({ linkStyle }: NotSureSectionProps) => {
+const NotSureSection = ({
+  linkStyle,
+  keycloakInstance,
+}: NotSureSectionProps) => {
   const links = [
     {
       name: "Register",
@@ -25,7 +29,6 @@ const NotSureSection = ({ linkStyle }: NotSureSectionProps) => {
       alignItems={["flex-start", "flex-start", "flex-start", "center"]}
       justifyContent={["flex-start", "space-between"]}
     >
-      {/* <Button onClick={getTokenBalance}>Get Data</Button> */}
       <Text fontSize={"lg"} mr={[0, 4]} whiteSpace={"nowrap"}>
         Can't login?
       </Text>
@@ -43,6 +46,26 @@ const NotSureSection = ({ linkStyle }: NotSureSectionProps) => {
           </Link>
         ))}
       </Flex>
+      {keycloakInstance.authenticated && (
+        <Button
+          colorScheme={"blue"}
+          variant={"outline"}
+          size={"sm"}
+          fontSize={"sm"}
+          mt={[4, 0]}
+          onClick={() => {
+            keycloakInstance
+              .logout({
+                redirectUri: "https://gate2.alkebulanmeta.network/",
+              })
+              .then(() => {
+                console.log("logout");
+              });
+          }}
+        >
+          Logout
+        </Button>
+      )}
     </Flex>
   );
 };

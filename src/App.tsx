@@ -24,14 +24,18 @@ export function App() {
       });
   }, []);
 
-  console.log(keycloakInstance?.tokenParsed);
   return (
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Routes>
           <Route
             path="/*"
-            element={<Login isAuthenticated={isAuthenticated} />}
+            element={
+              <Login
+                isAuthenticated={isAuthenticated}
+                keycloakInstance={keycloakInstance}
+              />
+            }
           />
         </Routes>
       </BrowserRouter>

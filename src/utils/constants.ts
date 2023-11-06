@@ -45,8 +45,7 @@ export const subOptionsPassport: SubOption[] = [
     logo: chatLogo,
     description:
       "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
-    authLink:
-      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/saml?SAMLRequest=hZFNT4NAEIbvJv6Hzd6B5UOBTaGpGmOTmjYt9eClWWBiSWEXd5bany8tNqmJqXOcr%2FeZd0bjQ1OTPWislEyoazNKQBaqrORHQtfZsxXRcTpC0dQtn3RmK5fw2QEa0s9J5KdCQjstuRJYIZeiAeSm4KvJ64x7NuOtVkYVqqZk%2BpTQDQviPPTyICr9MnIZxHdBWRZlUEDpxzGLoYjy0L9nsaDk7czlHbmmiB1MJRohTZ9inm%2B5zPKCzA05izkL3ylZ%2FIg9VHI44RpZPjQhf8myhbWYrzJKJoigTS%2F6qCR2DegV6H1VwHo5S%2BjWmBa54%2BSqs0W9g7yrhWzACFuC%2BVJ654jeIqdRm6MvTr8eDna7bSkZLOSnE%2FSFd9cBxRmGpv9Kj5wLhfT2hvwRQ8%2FvR6bf&RelayState=%2Fauth%2Fmo_saml%2Findex.php",
+    authLink: "https://alkebulanmeta.net/#/start_sso",
   },
   {
     name: "3D-Play",
@@ -126,39 +125,13 @@ export const subOptionsNoPassport: SubOption[] = [
     logo: chatLogo,
     description:
       "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
-    authLink:
-      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?response_type=code&client_id=ans-chat-app&redirect_uri=https%3A%2F%2Fmatrix.alkebulanmeta.net%2F_synapse%2Fclient%2Foidc%2Fcallback&scope=openid+profile&state=zuq6NjXuzeljsx8wQCgAbUg77LJrjG&nonce=p5dIWfz2fJcVAGsqnTyPqKHEiU2NAT&code_challenge_method=S256&code_challenge=78Zp5jeEpjhGFijLNq59sFTYsDL9RRN38DcGFwdLc1U",
+    authLink: "https://alkebulanmeta.net/#/start_sso",
   },
   {
     name: "dLinks",
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
-  },
-];
-export const subOptionsTemporary: SubOption[] = [
-  {
-    name: "Assets",
-    logo: assetsLogo,
-    description:
-      "The Assets App is your Learning Assets store; buy OnWeb3-Passports and other EcoSysMAAT / AlkebulanMeta NFTs that open up exclusive areas in the ecosystem, purchase subscriptions and sponsorship packages to support cooperative learning and secure other advanced learning resources built to advance your success.",
-    authLink:
-      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?client_id=ansAssetsStore&scope=openid%20email%20profile&redirect_uri=https://alkebulanmeta.app&response_type=code&state=T25XZWIzIEtleWNsb2Fr",
-  },
-  {
-    name: "Chat",
-    logo: chatLogo,
-    description:
-      "Chat is your secure communications (messaging and multimedia) platform; built on the Element messaging application and the Matrix protocol.",
-    authLink:
-      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?response_type=code&client_id=ans-chat-app&redirect_uri=https%3A%2F%2Fmatrix.alkebulanmeta.net%2F_synapse%2Fclient%2Foidc%2Fcallback&scope=openid+profile&state=zuq6NjXuzeljsx8wQCgAbUg77LJrjG&nonce=p5dIWfz2fJcVAGsqnTyPqKHEiU2NAT&code_challenge_method=S256&code_challenge=78Zp5jeEpjhGFijLNq59sFTYsDL9RRN38DcGFwdLc1U",
-  },
-  {
-    name: "e-Learning",
-    logo: elearningLogo,
-    description: "e-Learning is your personalised online learning environment.",
-    authLink:
-      "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/saml?SAMLRequest=hZFNT4NAEIbvJv6Hzd6B5UOBTaGpGmOTmjYt9eClWWBiSWEXd5bany8tNqmJqXOcr%2FeZd0bjQ1OTPWislEyoazNKQBaqrORHQtfZsxXRcTpC0dQtn3RmK5fw2QEa0s9J5KdCQjstuRJYIZeiAeSm4KvJ64x7NuOtVkYVqqZk%2BpTQDQviPPTyICr9MnIZxHdBWRZlUEDpxzGLoYjy0L9nsaDk7czlHbmmiB1MJRohTZ9inm%2B5zPKCzA05izkL3ylZ%2FIg9VHI44RpZPjQhf8myhbWYrzJKJoigTS%2F6qCR2DegV6H1VwHo5S%2BjWmBa54%2BSqs0W9g7yrhWzACFuC%2BVJ654jeIqdRm6MvTr8eDna7bSkZLOSnE%2FSFd9cBxRmGpv9Kj5wLhfT2hvwRQ8%2FvR6bf&RelayState=%2Fauth%2Fmo_saml%2Findex.php",
   },
 ];
 

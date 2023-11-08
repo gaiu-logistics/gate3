@@ -31,7 +31,7 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/*"
             element={
               <Login
                 isAuthenticated={isAuthenticated}

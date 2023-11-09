@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./views/Login";
 import { useEffect, useState } from "react";
 import Keycloak from "keycloak-js";
+// const cors = require('cors');    
+// App.use(cors());
 const keycloakInstance = new Keycloak({
   clientId: "ow3-uni-login-app",
   realm: "OnWeb3Keycloak",
@@ -29,7 +31,7 @@ export function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/*"
+            path=""
             element={
               <Login
                 isAuthenticated={isAuthenticated}

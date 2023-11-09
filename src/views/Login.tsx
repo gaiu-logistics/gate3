@@ -48,8 +48,8 @@ type LoginProps = {
   isAuthenticated: boolean;
   keycloakInstance: any;
 };
-
 const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
+  console.log(keycloakInstance);
   const [selectedOption, setSelectedOption] = useState("");
   const [subSelectedOption, setSubSelectedOption] = useState<SubOption>();
   const [currentIndex, setCurrentIndex] = useState(() => {

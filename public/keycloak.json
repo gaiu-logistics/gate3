@@ -1,6 +1,6 @@
 {
   "realm": "OnWeb3Keycloak",
-  "auth-server-url": "https://gate2.alkebulanmeta.network/",
+  "auth-server-url": "https://gate2.alkebulanmeta.network",
   "ssl-required": "external",
   "resource": "ow3-uni-login-app",
   "public-client": true,

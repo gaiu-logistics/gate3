@@ -1,4 +1,4 @@
-]{
+{
   "realm": "OnWeb3Keycloak",
   "auth-server-url": "https://gate2.alkebulanmeta.network",
   "ssl-required": "external",

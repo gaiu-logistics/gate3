@@ -55,7 +55,7 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
   const [currentIndex, setCurrentIndex] = useState(() => {
     return Math.floor(Math.random() * images.length);
   });
-
+  console.log(keycloakInstance);
   const handleOptionChange = (value: string) => {
     setSelectedOption(value);
     setSubSelectedOption(undefined);
@@ -236,12 +236,12 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                     <Flex flexDir={"column"} flex={1}>
                       {isAuthenticated ? (
                         <Text>
-                          I am approved for Temporary-Passcode access{" "}
+                          Passcode access approved{" "}
                           <CheckIcon as="span" color={"green.500"} />
                         </Text>
                       ) : (
                         <Text>
-                          I am not approved for Temporary-Passcode access{" "}
+                          Passcode access not approved{" "}
                           <CloseIcon as="span" color={"red.500"} />
                         </Text>
                       )}

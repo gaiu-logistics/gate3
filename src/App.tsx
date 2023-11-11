@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./views/Login";
 import { useEffect, useState } from "react";
 import Keycloak from "keycloak-js";
-// const cors = require('cors');    
+// const cors = require('cors');
 // App.use(cors());
 const keycloakInstance = new Keycloak({
   clientId: "ow3-uni-login-app",
@@ -20,6 +20,7 @@ export function App() {
         onLoad: "login-required",
         checkLoginIframe: false,
         redirectUri: "https://gate3v.alkebulanmeta.network/",
+        flow: "implicit",
       })
       .then(() => {
         setIsAuthenticated(keycloakInstance.tokenParsed!.hTA3);

@@ -155,14 +155,45 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
               <>
                 <Heading>Focus</Heading>
                 <Menu>
-                  <MenuButton as={Button} {...MenuButtonStyle}>
-                    <Text>{subSelectedOption?.name || "Select the app"}</Text>
+                  <MenuButton as={Button} {...MenuButtonStyle} w={"full"}>
+                    <Text w="full">
+                      {subSelectedOption?.name || "Select the app"}
+                    </Text>
                     <ChevronDownIcon
                       position={"absolute"}
                       right={"10px"}
                       top={3}
                     />
                   </MenuButton>
+
+                  {keycloakInstance?.idTokenParsed?.hOW3PP ? (
+                    <>
+                      <Text textAlign={"right"}>
+                        Your registered OnWeb3-Passport #:{" "}
+                        <Text color={"green.500"}>
+                          {keycloakInstance?.idTokenParsed?.hOW3PP}{" "}
+                        </Text>
+                      </Text>
+                    </>
+                  ) : (
+                    <Box display={"flex"} flexDir={"column"}>
+                      <Text mb={"4"} alignSelf={"flex-end"}>
+                        You have{" "}
+                        <Text color={"red"} display={"inline"}>
+                          No Passport registered
+                        </Text>{" "}
+                      </Text>
+                      <Text mb={"8"} alignSelf={"flex-end"} textAlign={"right"}>
+                        You need an OnWeb3-Passport for full access to the
+                        Alkebulan Network-State: Use the No Passport status to
+                        visit our Assets Store at{" "}
+                        <a href="alkebulanmeta.app">alkebulanmeta.app</a>,
+                        you'll be logged in and able to secure your unique
+                        OnWeb3-Passport (NFT). Click on the Assets App now and
+                        purchase your personal OnWeb3-Passport asset(s) today.
+                      </Text>
+                    </Box>
+                  )}
                   <MenuList h={"80"} overflowY={"scroll"}>
                     {subOptionsPassport.map((subOption, index) => (
                       <MenuItem
@@ -179,14 +210,6 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                     ))}
                   </MenuList>
                 </Menu>
-                {keycloakInstance?.idTokenParsed?.hOW3PP && (
-                  <Text>
-                    Your registered OnWeb3-Passport #:{" "}
-                    <Text color={"green.500"}>
-                      {keycloakInstance?.idTokenParsed?.hOW3PP}{" "}
-                    </Text>
-                  </Text>
-                )}
                 <Button
                   onClick={() => {
                     if (keycloakInstance?.idTokenParsed?.hOW3PP?.length > 0) {
@@ -246,12 +269,12 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                   <Flex flex={1} gap={1} mb={8}>
                     <Flex flexDir={"column"} flex={1}>
                       {isAuthenticated ? (
-                        <Text>
+                        <Text textAlign={"right"}>
                           Passcode access approved{" "}
                           <CheckIcon as="span" color={"green.500"} />
                         </Text>
                       ) : (
-                        <Text>
+                        <Text textAlign={"right"}>
                           Passcode access not approved{" "}
                           <CloseIcon as="span" color={"red.500"} />
                         </Text>
@@ -323,21 +346,6 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                   display={"flex"}
                   flexDirection={"column"}
                 >
-                  <Text mb={"2"}>
-                    You have{" "}
-                    <Text color={"red"} display={"inline"}>
-                      No Passport registered
-                    </Text>{" "}
-                  </Text>
-                  <Text mb={"8"}>
-                    You need an OnWeb3-Passport for full access to the Alkebulan
-                    Network-State: Use the No Passport status to visit our
-                    Assets Store at{" "}
-                    <a href="alkebulanmeta.app">alkebulanmeta.app</a>, you'll be
-                    logged in and able to secure your unique OnWeb3-Passport
-                    (NFT). Click on the Assets App now and purchase your
-                    personal OnWeb3-Passport asset(s) today.
-                  </Text>
                   <Button
                     type="submit"
                     placeSelf={"center"}

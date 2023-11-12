@@ -59,6 +59,7 @@ export const subOptionsPassport: SubOption[] = [
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
+    authLink: "https://dlinks.alkebulanmeta.network/",
   },
   {
     name: "Media",
@@ -132,6 +133,7 @@ export const subOptionsNoPassport: SubOption[] = [
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
+    authLink: "https://dlinks.alkebulanmeta.network/",
   },
 ];
 

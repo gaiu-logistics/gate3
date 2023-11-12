@@ -180,8 +180,9 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                       <Text mb={"4"} alignSelf={"flex-end"}>
                         You have{" "}
                         <Text color={"red"} display={"inline"}>
-                          No Passport registered
+                          No Passport
                         </Text>{" "}
+                        registered
                       </Text>
                       <Text mb={"8"} alignSelf={"flex-end"} textAlign={"right"}>
                         You need an OnWeb3-Passport for full access to the

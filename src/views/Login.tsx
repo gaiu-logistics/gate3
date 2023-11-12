@@ -192,8 +192,9 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                           alkebulanmeta.app
                         </a>
                         , you'll be logged in and able to secure your unique
-                        OnWeb3-Passport (NFT). Click on the Assets App now and
-                        purchase your personal OnWeb3-Passport asset(s) today.
+                        OnWeb3-Passport (NFT). Select{" "}
+                        <strong>No Passport | Assets App | Log in</strong>; to
+                        get your personal OnWeb3-Passport asset(s) today.
                       </Text>
                     </Box>
                   )}

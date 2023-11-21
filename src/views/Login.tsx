@@ -306,7 +306,7 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                       }
                     }}
                   >
-                    Log In
+                    Connect
                   </Button>
                 </FormControl>
                 <NotSureSection
@@ -361,7 +361,7 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                         subSelectedOption?.authLink as string;
                     }}
                   >
-                    Log In
+                    Connect
                   </Button>
                 </FormControl>
                 <NotSureSection

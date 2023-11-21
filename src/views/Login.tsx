@@ -189,11 +189,11 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                         Alkebulan Network-State: Use the No Passport status to
                         visit our Assets Store at{" "}
                         <a href="https://alkebulanmeta.app" target="_blank">
-                          alkebulanmeta.app
+                          AlkebulanMeta.app
                         </a>
                         , you'll be logged in and able to secure your unique
                         OnWeb3-Passport (NFT). Select{" "}
-                        <strong>No Passport | Assets App | Log in</strong>; to
+                        <strong>No Passport | Assets App | Connect</strong>; to
                         get your personal OnWeb3-Passport asset(s) today.
                       </Text>
                     </Box>

@@ -73,7 +73,7 @@ export const subOptionsPassport: SubOption[] = [
     logo: elearningLogo,
     description: "e-Learning is your personalised online learning environment.",
     authLink:
-      "https://bou.alkebulanmeta.network/auth/mo_saml/index.php&scope=openid+email+profile",
+      "https://bou.alkebulanmeta.network/auth/mo_saml/index.php",
   },
   {
     name: "DEx",

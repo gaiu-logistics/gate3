@@ -134,7 +134,7 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
             minW={["100%", "50%"]}
             gap="10"
           >
-            <Heading>STATUS</Heading>
+            <Heading>Status</Heading>
             <Menu>
               <MenuButton as={Button} {...MenuButtonStyle}>
                 <Text>{selectedOption || "Login with"}</Text>

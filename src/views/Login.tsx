@@ -216,7 +216,7 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                 </Menu>
                 <Button
                   onClick={() => {
-                    if (keycloakInstance?.idTokenParsed?.hOW3PP?.length > 0) {
+                    if (keycloakInstance?.idTokenParsed?.hOW3PP) {
                       window.location.href =
                         subSelectedOption?.authLink as string;
                     } else {
@@ -357,8 +357,12 @@ const Login = ({ isAuthenticated, keycloakInstance }: LoginProps) => {
                     w={"100%"}
                     bg={"bodyBackground"}
                     onClick={() => {
-                      window.location.href =
-                        subSelectedOption?.authLink as string;
+                      if (subSelectedOption?.authLink) {
+                        window.location.href =
+                          subSelectedOption?.authLink as string;
+                      } else {
+                        alert("Please select an app");
+                      }
                     }}
                   >
                     Connect

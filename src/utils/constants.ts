@@ -133,7 +133,7 @@ export const subOptionsNoPassport: SubOption[] = [
     logo: Dlinks,
     description:
       "dLinks is your decentralized profile connecting the learning interests you want to share in our cooperative network.",
-    authLink: "https://dlinks.alkebulanmeta.network/",
+    authLink: "https://gate2.alkebulanmeta.network/realms/OnWeb3Keycloak/protocol/openid-connect/auth?client_id=espoCrm-sso&redirect_uri=https%3A%2F%2Fdlink.onweb3.net%2Fportal%2Foauth-callback.php&response_type=code&scope=openid%20profile%20email%20phone&state=zqjig&nonce=2jvxp&prompt=consent",
   },
 ];
 

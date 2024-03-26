@@ -109,7 +109,7 @@ export const subOptionsPassport: SubOption[] = [
     logo: bkApp,
     description:
       "BKApp supports members' engagement across our various Meta Readers' Rooms [in development].",
-    authLink: "https://bk.apps.alkebulanmeta.network/",
+    authLink: "https://bkapp.ow3.io/",
   },
 ];
 export const subOptionsNoPassport: SubOption[] = [
